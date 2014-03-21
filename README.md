@@ -1,6 +1,6 @@
 # Forecastr
 
-A simple gem for openweathermap.org API.
+A VERY minimal gem for openweathermap.org's API. Currently supports only current forecast - temperature, pressure, humidity, min/max temperatures and wind (speed and direction). 
 
 ## Installation
 
@@ -39,3 +39,6 @@ Or, you can search for forecast by coordinates:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Author
+Ile Eftimov <br> [website](http://eftimov.net) [twitter](http://twitter.com/fteem) 
