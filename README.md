@@ -1,6 +1,6 @@
 # Forecastr
 
-A VERY minimal gem for openweathermap.org's API. Currently supports only current forecast - temperature, pressure, humidity, min/max temperatures and wind (speed and direction). 
+A VERY minimal gem for openweathermap.org's API. Currently supports only current forecast - temperature, pressure, humidity, min/max temperatures and wind (speed and direction).
 
 ## Installation
 
@@ -27,7 +27,7 @@ You can search for forecast by city:
 
 Or, you can search for forecast by coordinates:
 ```ruby
-  london = Forecastr::Radar.find_by_city(51.5072, 0.1275)
+  london = Forecastr::Radar.find_by_coordinates(51.5072, 0.1275)
   london.temperature.to_celsius
   # => 18
 ```
@@ -41,4 +41,4 @@ Or, you can search for forecast by coordinates:
 5. Create new Pull Request
 
 ## Author
-Ile Eftimov <br> [website](http://eftimov.net) [twitter](http://twitter.com/fteem) 
+Ile Eftimov <br> [website](http://eftimov.net) [twitter](http://twitter.com/fteem)
