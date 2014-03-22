@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ileeftimov@gmail.com"]
   spec.description   = %q{Simple gem to use with openweathermap.org API}
   spec.summary       = %q{Simple gem to use with openweathermap.org API}
-  spec.homepage      = ""
+  spec.homepage      = "http://github.com/fteem/forecastr"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
