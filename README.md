@@ -32,6 +32,24 @@ Or, you can search for forecast by coordinates:
   # => 18
 ```
 
+Some methods:
+```ruby
+  skopje = Forecastr::Radar.find_by_coordinates(42.00, 21.4333)
+
+  skopje.temperature.to_celsius
+  # => 10
+  skopje.temperature.to_farenheit
+  # => 50
+  skopje.humidity
+  # => 45
+  skopje.pressure
+  # => 1002
+  skopje.wind.direction
+  # => NE
+  skopje.wind.speed
+  # => 3.2 m/s
+```
+
 ## Contributing
 
 1. Fork it
