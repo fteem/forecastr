@@ -5,13 +5,11 @@ module Forecastr
   class Radar
     class << self
       def find_by_city(city_name)
-        radar = new
-        radar.find_by_city(city_name)
+        new.find_by_city(city_name)
       end
 
       def find_by_coordinates(lat, lon)
-        radar = new
-        radar.find_by_coordinates(lat, lon)
+        new.find_by_coordinates(lat, lon)
       end
     end
 

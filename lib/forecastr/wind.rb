@@ -17,5 +17,9 @@ module Forecastr
       val = ((@angle/22.5) + 0.5).to_i
       DIRECTIONS[val % 16]
     end
+
+    def to_s
+      "#{speed} #{direction}"
+    end
   end
 end

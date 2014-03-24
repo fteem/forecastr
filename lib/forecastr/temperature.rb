@@ -12,5 +12,9 @@ module Forecastr
     def to_farenheit
       (1.8 * (@kelvin - 273.15) + 32).round(2)
     end
+
+    def to_s
+      "#{to_celsius} °C"
+    end
   end
 end
