@@ -5,17 +5,17 @@ module Forecastr
                 :pressure, :humidity, :min_temperature,
                 :max_temperature, :clouds, :wind
 
-    def initialize(json)
-      @city = json['name']
-      @longitude = json['coord']['lon']
-      @latitude = json['coord']['lat']
-      @temperature = Forecastr::Temperature.new(json['main']['temp'])
-      @pressure = json['main']['pressure']
-      @humidity = json['main']['humidity']
-      @min_temperature = Forecastr::Temperature.new(json['main']['temp_min'])
-      @max_temperature = Forecastr::Temperature.new(json['main']['temp_max'])
-      @clouds = json['clouds']['all']
-      @wind = Forecastr::Wind.new(json)
+    def initialize(data)
+      @city = data.city
+      @longitude = data.longitude
+      @latitude = data.latitude
+      @temperature = Forecastr::Temperature.new(data.temperature)
+      @pressure = data.pressure
+      @humidity = data.humidity
+      @min_temperature = Forecastr::Temperature.new(data.min_temperature)
+      @max_temperature = Forecastr::Temperature.new(data.max_temperature)
+      @clouds = data.clouds
+      @wind = Forecastr::Wind.new(data.wind_speed, data.wind_angle)
     end
 
   end

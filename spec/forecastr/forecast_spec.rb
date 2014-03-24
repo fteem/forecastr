@@ -1,8 +1,9 @@
-require 'spec_helper'
+require_relative '../spec_helper'
 
 describe Forecastr::Forecast do
   let(:json) { JSON.parse(fixture('data.json').read) }
-  let(:forecast) { Forecastr::Forecast.new(json) }
+  let(:data) { Forecastr::DataContainer.new(json) }
+  let(:forecast) { Forecastr::Forecast.new(data) }
 
   it 'has a city' do
     expect(forecast.city).to eq "Benghazi"

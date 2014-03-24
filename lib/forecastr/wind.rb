@@ -4,17 +4,17 @@ module Forecastr
 
     attr_reader :speed, :direction
 
-    def initialize(json)
-      @json = json
+    def initialize(speed, angle)
+      @speed = speed
+      @angle = angle
     end
 
     def speed
-      "#{@json['wind']['speed']} m/s"
+      "#{@speed} m/s"
     end
 
     def direction
-      degrees = @json['wind']['deg']
-      val = ((degrees/22.5) + 0.5).to_i
+      val = ((@angle/22.5) + 0.5).to_i
       DIRECTIONS[val % 16]
     end
   end

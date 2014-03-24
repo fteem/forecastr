@@ -3,8 +3,6 @@ require 'json'
 
 module Forecastr
   class Radar
-    API_URL = "http://api.openweathermap.org/data/2.5/weather?"
-
     class << self
       def find_by_city(city_name)
         radar = new
@@ -17,16 +15,14 @@ module Forecastr
       end
     end
 
-    def find_by_city(city_name)
-      uri = URI(API_URL + "q=" + city_name)
-      @json = JSON.parse(Net::HTTP.get(uri))
-      Forecastr::Forecast.new(@json)
+    def find_by_city(name)
+      data = Forecastr::Client.search_by_city(name)
+      Forecastr::Forecast.new(data)
     end
 
     def find_by_coordinates(lat, lon)
-      uri = URI(API_URL + "lat=#{lat}&lon=#{lon}")
-      @json = JSON.parse(Net::HTTP.get(uri))
-      Forecastr::Forecast.new(@json)
+      data = Forecastr::Client.search_by_coordinates(lat, lon)
+      Forecastr::Forecast.new(data)
     end
 
   end
