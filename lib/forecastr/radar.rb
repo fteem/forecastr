@@ -10,6 +10,11 @@ module Forecastr
         radar = new
         radar.find_by_city(city_name)
       end
+
+      def find_by_coordinates(lat, lon)
+        radar = new
+        radar.find_by_coordinates(lat, lon)
+      end
     end
 
     def find_by_city(city_name)
