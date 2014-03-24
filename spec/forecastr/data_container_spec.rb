@@ -16,5 +16,7 @@ describe Forecastr::DataContainer do
     expect(container.clouds).to eq 0
     expect(container.wind_speed).to eq 1.16
     expect(container.wind_angle).to eq 128.501
+    expect(container.sunrise).to eq '1395376499'
+    expect(container.sunset).to eq '1395420461'
   end
 end
