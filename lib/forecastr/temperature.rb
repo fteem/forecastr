@@ -6,11 +6,11 @@ module Forecastr
     end
 
     def to_celsius
-      (@kelvin - 273.15).round(2)
+      TemperatureConverter.to_celsius(@kelvin)
     end
 
     def to_farenheit
-      (1.8 * (@kelvin - 273.15) + 32).round(2)
+      TemperatureConverter.to_farenheit(@kelvin)
     end
 
     def to_s
