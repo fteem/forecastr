@@ -8,47 +8,47 @@ class Forecastr::ForecastTest < Minitest::Test
   end
 
   def test_it_has_a_city
-    assert_equal @forecast.city, @data.city
+    assert_equal @data.city, @forecast.city
   end
 
   def test_it_has_time_of_sunrise
-    assert_equal @forecast.sunrise, DateTime.strptime(@data.sunrise, '%s')
+    assert_equal DateTime.strptime(@data.sunrise, '%s'), @forecast.sunrise
   end
 
   def test_time_of_sunset
-    assert_equal @forecast.sunset, DateTime.strptime(@data.sunset, '%s')
+    assert_equal DateTime.strptime(@data.sunset, '%s'), @forecast.sunset
   end
 
   def test_longitude
-    assert_equal @forecast.longitude, @data.longitude
+    assert_equal @data.longitude, @forecast.longitude
   end
 
   def test_latitude
-    assert_equal @forecast.latitude, @data.latitude
+    assert_equal @data.latitude, @forecast.latitude 
   end
 
   def test_current_temperature
-    assert_equal @forecast.temperature.to_celsius, Forecastr::TemperatureConverter.to_celsius(@data.temperature)
+    assert_equal Forecastr::TemperatureConverter.to_celsius(@data.temperature), @forecast.temperature.to_celsius 
   end
 
   def test_minimal_temperature
-    assert_equal @forecast.min_temperature.to_celsius, Forecastr::TemperatureConverter.to_celsius(@data.min_temperature)
+    assert_equal Forecastr::TemperatureConverter.to_celsius(@data.min_temperature), @forecast.min_temperature.to_celsius
   end
 
   def test_maximal_temperature
-    assert_equal @forecast.max_temperature.to_celsius, Forecastr::TemperatureConverter.to_celsius(@data.max_temperature)
+    assert_equal Forecastr::TemperatureConverter.to_celsius(@data.max_temperature), @forecast.max_temperature.to_celsius
   end
 
   def test_pressure
-    assert_equal @forecast.pressure, 1001
+    assert_equal 1001, @forecast.pressure
   end
 
   def test_humidity
-    assert_equal @forecast.humidity, 70
+    assert_equal 70, @forecast.humidity
   end
 
   def test_cloud_coverage
-    assert_equal @forecast.clouds, 92
+    assert_equal 92, @forecast.clouds
   end
 
   def test_wind

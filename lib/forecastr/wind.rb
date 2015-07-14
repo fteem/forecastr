@@ -1,6 +1,6 @@
 module Forecastr
   class Wind
-    DIRECTIONS = ["N","NNE","NE","ENE","E","ESE", "SE", "SSE","S","SSW","SW","WSW","W","WNW","NW","NNW"]
+    DIRECTIONS = %w[N NNE NE ENE E ESE SE SSE S SSW SW WSW W WNW NW NNW]
 
     def initialize(speed, angle)
       @speed = speed
