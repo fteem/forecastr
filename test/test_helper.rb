@@ -2,7 +2,7 @@ require 'forecastr'
 require 'minitest/autorun'
 require 'minitest/unit'    
 require "minitest/reporters"
-require 'webmock'
+require 'webmock/minitest'
 
 include WebMock::API
 
