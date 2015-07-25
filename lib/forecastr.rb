@@ -1,4 +1,5 @@
 require "forecastr/version"
+require "forecastr/uri_builder"
 require "forecastr/radar"
 require "forecastr/forecast"
 require "forecastr/wind"
